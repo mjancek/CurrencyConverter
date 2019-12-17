@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from CurrencyConverter import currency_converter
+from CurrencyConverter import __main__
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def return_api():
             'output_currency': request.args.get('output_currency', type=str, default='all')}
     # Run program and check if there was some error
     try:
-        response = currency_converter.main(args)
+        response = __main__.main(args)
     except ValueError as err:
         return jsonify({"error": err.args}), 400
     except ConnectionError as err:

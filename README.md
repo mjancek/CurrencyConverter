@@ -10,7 +10,7 @@ git clone https://github.com/mato0036/CurrencyConverter.git
 ```
 
 
-##CLI application
+## CLI application
 To run CLI application, firstly install requirements for application
 ```shell script
 pip install -r requirements.txt
@@ -21,7 +21,7 @@ python -m CurrencyConverter --amount <amount> --input_currency <3 letter name> [
 ```
 
 
-##API application
+## API application
 For API application is provided Docker image for easier use. 
 
 To run API application build Docker image
@@ -38,7 +38,7 @@ localhost:8080/currency_converter?amount=<amount>&input_currency=<3 letter name>
 ```
 
 
-##Parameters
+## Parameters
 Parameter `input_currency` is not supporting symbols of currencies, because symbols are not exclusive for currencies.
 
 However when is symbol used for `output_currency` application return all currencies, that have that symbol.
